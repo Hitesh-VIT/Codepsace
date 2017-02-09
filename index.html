@@ -30,6 +30,25 @@
     
     <link rel="stylesheet" href="animate.css">
 
+    <style type="text/css">
+        #pinContainer {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            -webkit-perspective: 1000;
+                    perspective: 1000;
+        }
+        #slideContainer {
+            width: 400%; /* to contain 4 panels, each with 100% of window width */
+            height: 100%;
+        }
+        .panel {
+            height: 100%;
+            width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
+            float: left;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -45,12 +64,12 @@
                     </a>
                 </li>
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="#section2">
                         tracks
                     </a>
                 </li>
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="#section3">
                         past years
                     </a>
                 </li>
@@ -82,6 +101,25 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
+
+        <!-- <div id="pinContainer">
+            <div id="slideContainer">
+                <section class="panel blue">
+                    <b>ONE</b>
+                </section>
+                <section class="panel turqoise">
+                    <b>TWO</b>
+                </section>
+                <section class="panel green">
+                    <b>THREE</b>
+                </section>
+                <section class="panel bordeaux">
+                    <b>FOUR</b>
+                </section>
+            </div>
+        </div> -->
+
+        
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -96,6 +134,9 @@
             </div>
         </div>
 
+        <div id="pinContainer">
+        <div id="slideContainer">
+        <section id="section1" class="panel">
         <div style="padding:0px; background-color:#ffffff; margin-top:10vh;">
             <div class="container-fluid">
                 <div class="row">
@@ -123,7 +164,9 @@
                 </div>
             </div>
         </div>
+        </section>
 
+        <section id="section2" class="panel">
         <div id="page-content-wrapper" style="background-color: #ffffff;">
             <div class="container-fluid">
                 <div class="row">
@@ -145,13 +188,65 @@
                     </div>
                 </div>
             </div>
-        <div>
+        </div>
+        </section>
+
+        <section id="section3" class="panel">
+        <div id="page-content-wrapper" style="background-color: #ffffff;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 col-xs-12 img_hover" style="margin-top: 6vh; margin-bottom: 3vh; padding: 10px;">
+                        <div class="past text_head"><font size="20px"><b>2015</b></font></div>
+                        <div class="image">
+                            <div class="text">
+                                <p>Hello Shreyansh</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 img_hover" style="margin-left: 1vw; margin-right: 1vw; margin-top: 6vh; margin-bottom: 3vh; padding: 10px;" >
+                        <div class="past text_head"><font size="20px"><b>2016</b></font></div>
+                        <div class="image">
+                            <div class="text">
+                                <p>Hello Shreyansh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="panel">
+        <div id="page-content-wrapper" style="background-color: #ffffff;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 col-xs-12 img_hover" style="margin-top: 6vh; margin-bottom: 3vh; padding: 10px;">
+                        <div class="past text_head"><font size="20px"><b>2015</b></font></div>
+                        <div class="image">
+                            <div class="text">
+                                <p>Hello Shreyansh</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 img_hover" style="margin-left: 1vw; margin-right: 1vw; margin-top: 6vh; margin-bottom: 3vh; padding: 10px;" >
+                        <div class="past text_head"><font size="20px"><b>2016</b></font></div>
+                        <div class="image">
+                            <div class="text">
+                                <p>Hello Shreyansh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
 
         <!-- /#page-content-wrapper -->
         
         
         
-        </div>  
+        </div>
+        </div>
 
 
         
@@ -177,6 +272,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/index.js"></script>
 
+<!-- ************************************************ -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+    <script type="text/javascript" src="http://scrollmagic.io/js/lib/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="http://scrollmagic.io/js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="http://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script>
+        $(function () { // wait for document ready
+            // init
+            var controller = new ScrollMagic.Controller();
+
+            // define movement of panels
+            var wipeAnimation = new TimelineMax()
+                // animate to second panel
+                .to("#slideContainer", 0.5, {z: -150})      // move back in 3D space
+                .to("#slideContainer", 1,   {x: "-25%"})    // move in to first panel
+                .to("#slideContainer", 0.5, {z: 0})             // move back to origin in 3D space
+                // animate to third panel
+                .to("#slideContainer", 0.5, {z: -150, delay: 1})
+                .to("#slideContainer", 1,   {x: "-50%"})
+                .to("#slideContainer", 0.5, {z: 0})
+                // animate to forth panel
+                .to("#slideContainer", 0.5, {z: -150, delay: 1})
+                .to("#slideContainer", 1,   {x: "-75%"})
+                .to("#slideContainer", 0.5, {z: 0});
+
+            // create scene to pin and link animation
+            new ScrollMagic.Scene({
+                    triggerElement: "#pinContainer",
+                    triggerHook: "onLeave",
+                    duration: "500%"
+                })
+                .setPin("#pinContainer")
+                .setTween(wipeAnimation)
+                //.addIndicators() // add indicators (requires plugin)
+                .addTo(controller);
+        });
+    </script>
+<!--***********************************************  -->
 
 </body>
 
