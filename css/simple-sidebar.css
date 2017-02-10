@@ -188,3 +188,20 @@ html, body, #wrapper {
         margin-right: 0;
     }
 }
+
+#solution{
+    overflow: auto;
+    height: 40vh;
+    background: linear-gradient(0deg, #fff 0%, #000 45%, #fff 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    background-attachment: local;
+}
+#solution > h4{
+    z-index: 1;
+}
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
