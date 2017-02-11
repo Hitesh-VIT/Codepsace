@@ -192,10 +192,10 @@ html, body, #wrapper {
 #solution{
     overflow: auto;
     height: 40vh;
-    background: linear-gradient(0deg, #fff 0%, #000 45%, #fff 100%);
+    background: linear-gradient(0deg, #fff 0%, #444343 45%, #fff 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-    background-attachment: local;
+    
 }
 #solution > h4{
     z-index: 1;
