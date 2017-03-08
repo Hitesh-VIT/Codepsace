@@ -82,9 +82,22 @@ html, body, #wrapper {
     margin-top: 10%;
 }
 #faq{
-    padding:0px; 
-    background-color:#ffffff; 
-    margin-top: 15%;
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin-bottom: 3vh;
+    margin-top: 10%;
+}
+#page-content-wrapper-reg {
+    width: 100%;
+    position: relative;
+    padding: 10%;
+    background-color: #0093fc;
+    height:100%;
+    border-radius: 25px;
+    margin-bottom: 3vh;
 }
 .background_blue{
 	position: relative;
@@ -198,6 +211,10 @@ html, body, #wrapper {
         margin-top: 15%;
         height: auto;
     }
+    .form_reg{
+        margin-top: 5%;
+        height: auto;
+    }
     .contact{
         margin-left: 25%;
         margin-right: 25%;
@@ -270,6 +287,9 @@ html, body, #wrapper {
         height: 60%;
         margin-top: 50%;
         padding: 20px;
+    }
+    #page-content-wrapper-reg {
+        padding: 0%;
     }
 }
 

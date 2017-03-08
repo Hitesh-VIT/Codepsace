@@ -6,3 +6,10 @@ $(document).ready(function(){
     nav: false
   });
 });
+
+//Validation
+
+$(':checkbox').click(function() {
+    $('#reg_no').attr('disabled',! this.checked)
+    $('#uni_name').attr('disabled', this.checked)
+});
