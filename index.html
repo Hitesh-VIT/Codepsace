@@ -300,11 +300,13 @@
     <script src="js/index.js"></script>
     <script type="text/javascript" src="js/javascript.fullPage.js"></script>
     <script type="text/javascript">
+    if (window.innerWidth > 760){
 	fullpage.initialize('#fullpage', {
 		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
 		menu: '#menu',
 		css3:true
-	});
+	})
+    };
     </script>
 
 </body>
