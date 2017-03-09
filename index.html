@@ -175,19 +175,21 @@
         <!-- Registration -->
         <div class="section" id="page-content-wrapper-reg">
             <div class="container" style="width: 100%">
-                <h4 style="opacity: 0.6; font-size: 25px; text-align: center">Make Payment</h4>
+                <p style="font-size: 25px; text-align: center">Make Payment</p>
                 <div class="row form_reg">
                             <div class="col-sm-12 col-xs-12 col-sm-12">
-                                <form name="address" id="form" action="#" method="post" class="form-horizontal">
+                                <form id="form_pay"class="form-horizontal">
 									<div class="form-group" style="margin-bottom: 2.5%">
 										<div id="name_div" class="col-md-12 col-xs-12 col-sm-12">
-											<input type="text"  name="name" id="name" class="form-control" placeholder="NAME" required="required">
-										</div>
+											<input type="text" id="name_pay" class="form-control" placeholder="NAME" >
+                                            <span id="error_name_pay" class="error" style="color: #ffffff; margin-top: 2px">* This field is required</span>
+                                        </div>
 									</div>
 									<div class="form-group" style="margin-bottom: 2.5%">
 										<div id="email_div" class="col-md-12 col-xs-12 col-sm-12">
-											<input type="email" id="email" name="email" class="form-control" placeholder="E-MAIL" required="required">
+											<input type="email" id="email_pay" class="form-control" placeholder="E-MAIL" >
 										</div>
+                                        <span id="error_email_pay" class="error" style="color: #ffffff; margin-top: 2px">* This field is required</span>
 									</div>
                                     <div class="row" style="margin-bottom: 2%"><center>
                                         <div class="col-lg-6 col-xs-12 col-md-6" style="color: #ffffff; text-align: center">
@@ -195,25 +197,27 @@
                                         </div>
                                         <div class="col-lg-6 col-xs-12 col-md-6">
                                             <div class="input-group" style="width: 30px;">
-                                            <span class="input-group-addon" style="background-color: #0093fc; border: 2px solid #7ccaf6; border-radius: 2px">
-                                                <input id="theCheckbox" type="checkbox" aria-label="...">
+                                            <span class="input-group-addon" style="background-color: #0093fc; border: 2px solid #7ccaf6; border-radius: 4px;padding-top: 10px;">
+                                                <input id="Checkbox_pay" type="checkbox" aria-label="...">
                                             </span>
                                             </div><!-- /input-group -->
                                         </div></center><!-- /.col-lg-6 -->
                                     </div>
                                     <div class="form-group" style="margin-bottom: 2.5%">
 										<div id="reg_no_div" class="col-md-12 col-xs-12 col-sm-12">
-											<input type="text" id="reg_no" pattern="^[1-9]{1}[0-9]{1}[A-Za-z]{3}[0-9]{4}$" class="form-control" style="background-color: #0093fc" placeholder="REGISTRATION No." required="required" disabled>
+											<input type="text" id="reg_no_pay" pattern="^[1-9]{1}[0-9]{1}[A-Za-z]{3}[0-9]{4}$" class="form-control" style="background-color: #0093fc" placeholder="REGISTRATION No." disabled>
 										</div>
+                                        <span id="error_reg_pay" class="error" style="color: #ffffff; margin-top: 2px">* This field is required</span>
 									</div>
                                     <div class="form-group" style="margin-bottom: 2.5%">
 										<div id="uni_name_div" class="col-md-12 col-xs-12 col-sm-12">
-											<input type="email" id="uni_name"class="form-control" style="background-color: #0093fc" placeholder="UNIVERSITY / INSTITUTION NAME" required="required" disabled>
+											<input type="text" id="uni_name_pay"class="form-control" style="background-color: #0093fc" placeholder="UNIVERSITY / INSTITUTION NAME">
 										</div>
+                                        <span id="error_uni_pay" class="error" style="color: #ffffff; margin-top: 2px">* This field is required</span>
 									</div>
 									<div class="form-group" style="margin-top: 2vh;">
-                                        <div class="col-md-4 col-xs-12 col-sm-12"><center>
-                                            <button type="submit" class="btn btn-send"><center>Proceed To Pay</center></button>
+                                        <div class="col-md-4 col-xs-12 col-sm-12" onclick="pay('name_pay', 'email_pay', 'Checkbox_pay', 'reg_no_pay', 'uni_name_pay');"><center>
+                                            <button id="pay" type="submit" class="btn btn-send"><center>Proceed To Pay</center></button>
                                         </div>
                                     </div>
                                 </form>
@@ -237,20 +241,20 @@
                         <div class="row form">
                             <div class="col-sm-12 col-xs-12 col-sm-12">
                                 <h4 style="opacity: 0.6">Have a doubt? Ask right away</h4>
-                                <form name="address" id="form" action="#" method="post" class="form-horizontal">
+                                <form id="form" class="form-horizontal">
 									<div class="form-group">
 										<div id="name_div" class="col-md-12 col-xs-12 col-sm-12">
-											<input type="text"  name="name" id="name" class="form-control" placeholder="NAME" required="required">
+											<input type="text"id="name" class="form-control" placeholder="NAME" required="required">
 										</div>
 									</div>
 									<div class="form-group">
 										<div id="email_div" class="col-md-12 col-xs-12 col-sm-12">
-											<input type="email" id="email" name="email" class="form-control" placeholder="E-MAIL" required="required">
+											<input type="email" id="email"class="form-control" placeholder="E-MAIL" required="required">
 										</div>
 									</div>
 									<div class="form-group">
 										<div id="message_div" class="col-md-12 col-xs-12 col-sm-12">
-										<textarea name ="message" rows="8" cols="60" class="form-control" placeholder="YOUR MESSAGE" required="required" style="resize: none;"></textarea>
+										<textarea id="message" rows="8" cols="60" class="form-control" placeholder="YOUR MESSAGE" required="required" style="resize: none;"></textarea>
 										</div>
 									</div>                       
 									<div class="form-group">

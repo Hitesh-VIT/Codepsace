@@ -95,6 +95,7 @@ html, body, #wrapper {
     position: relative;
     padding: 10%;
     background-color: #0093fc;
+    color: #ffffff;
     height:100%;
     border-radius: 25px;
     margin-bottom: 3vh;
@@ -288,9 +289,7 @@ html, body, #wrapper {
         margin-top: 50%;
         padding: 20px;
     }
-    #page-content-wrapper-reg {
-        padding: 0%;
-    }
+    
 }
 
 @media(max-width:767px){

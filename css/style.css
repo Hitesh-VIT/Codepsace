@@ -293,4 +293,6 @@ v:focus:-ms-input-placeholder {
     color: #ffffff;
 }
 
-
+.error{
+	display: none;
+}		
