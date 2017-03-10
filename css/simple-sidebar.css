@@ -100,9 +100,6 @@ html, body, #wrapper {
     border-radius: 25px;
     margin-bottom: 3vh;
 }
-#payment{
-    width: 60%;
-}
 .background_blue{
 	position: relative;
     padding-top: 13%;
@@ -303,9 +300,6 @@ html, body, #wrapper {
         height: auto;
         margin-top: 50%;
         padding: 20px;
-    }
-    #payment{
-        width: 100%;
     }
     
 }
