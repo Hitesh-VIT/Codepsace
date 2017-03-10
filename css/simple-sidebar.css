@@ -93,12 +93,15 @@ html, body, #wrapper {
 #page-content-wrapper-reg {
     width: 100%;
     position: relative;
-    padding: 10%;
+    padding: 12%;
     background-color: #0093fc;
     color: #ffffff;
     height:100%;
     border-radius: 25px;
     margin-bottom: 3vh;
+}
+#payment{
+    width: 65%;
 }
 .background_blue{
 	position: relative;
@@ -209,7 +212,7 @@ html, body, #wrapper {
 }
 @media (min-width: 1300px ) {
     .form{
-        margin-top: 15%;
+        margin-top: 10%;
         height: auto;
     }
     .form_reg{
@@ -273,7 +276,7 @@ html, body, #wrapper {
 
 @media(max-width:1000px){
     #faq{
-        margin-top: 150%;
+        margin-top: 0%;
     }
 }
 @media(max-width:767px){
@@ -300,6 +303,9 @@ html, body, #wrapper {
         height: auto;
         margin-top: 50%;
         padding: 20px;
+    }
+    #payment{
+        width: 100%;
     }
     
 }

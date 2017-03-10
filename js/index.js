@@ -64,3 +64,38 @@ function pay(name_pay, email_pay, Checkbox_pay, reg_no_pay, uni_name_pay){
    }
    name_check();email_check();check_checkbox();
 }
+
+
+function contact(name,email,message){
+    var name = document.getElementById(name).value;
+    var email = document.getElementById(email).value;
+    var message = document.getElementById(message).value;
+    var el_name = document.getElementById("error_name_contact");
+    var el_email = document.getElementById("error_email_contact");
+    var el_message = document.getElementById("error_text_contact");
+    function name_check(){
+      if (name.length === 0){
+        el_name.classList.remove("error");
+      }
+      else{
+        el_name.classList.add("error");
+      }
+    }
+   function email_check(){
+     if(email.search(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) == -1){
+       el_email.classList.remove("error");
+     }
+     else{
+       el_email.classList.add("error");
+     }
+   }
+   function message_check(){
+     if(message.length === 0){
+       	el_message.classList.remove("error");
+     }
+     else{
+        el_message.classList.add("error");
+     }
+   }
+   name_check();email_check();message_check(); 
+}
