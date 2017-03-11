@@ -27,7 +27,7 @@
     <link rel='stylesheet prefetch' href='https://dl.dropboxusercontent.com/s/npj0ketud6mhy0l/owl.carousel.min.css?dl=0'>
     
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/javascript.fullPage.css" />
+    
     <link rel="stylesheet" href="animate.css">
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_IObY48zCuzX_-syqyszGdqFZG6O0oX4&amp;sensor=false"></script>
@@ -316,6 +316,9 @@
     <script src="js/index.js"></script>
     <script type="text/javascript" src="js/javascript.fullPage.js"></script>
     <script type="text/javascript">
+    if (window.innerWidth > 760) {
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/javascript.fullPage.css" />');
+    }
     if (window.innerWidth > 760){
 	fullpage.initialize('#fullpage', {
 		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
