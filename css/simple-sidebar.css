@@ -114,17 +114,26 @@ html, body, #wrapper {
     border-radius: 25px;
     color: #fff;
 }
-.solution {
-	position: relative;
-    padding-top: 13%;
-    color: #000;
-    font-weight: bold;
-	padding-left:8%;
-	padding-right:8%;
-	padding-bottom:13%;
-	height:100%;
-    -webkit-mask-image: -webkit-gradient(linear, left bottom, left 40%,from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
-    
+
+#solution{
+    overflow-y: scroll;
+    height: 40vh;
+    width: 30vw;
+    z-index: 1;
+}
+#solution:after{
+  content: "";
+  background: linear-gradient(0deg, rgba(255,255,255,0.9) 25%, transparent 50%, rgba(255, 255, 255, 0.9) 75%);
+  position: fixed;
+  height: 45vh;
+  width: 30vw;
+  top: 28vh;
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #wrapper.toggled #page-content-wrapper {
