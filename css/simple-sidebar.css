@@ -64,12 +64,14 @@ html, body, #wrapper {
 #page-content-wrapper-contact {
     width: 100%;
     position: relative;
-    padding: 0px;
-    background-color: #ffffff;
+    padding: 15px;
     height:100%;
-    border-radius: 0px;
+    border-radius: 25px;
     margin-bottom: 3vh;
-    margin-top: 20%;
+    border-radius: 0px; 
+    padding: 0px; 
+    background-color: #ffffff; 
+    margin-top: 20%
 }
 #page-content-wrapper-past {
     width: 100%;
@@ -84,10 +86,9 @@ html, body, #wrapper {
 #faq{
     width: 100%;
     position: relative;
-    padding: 15px;
     background-color: #ffffff;
     border-radius: 25px;
-    margin-bottom: 3vh;
+    margin-bottom: 10%;
     margin-top: 10%;
 }
 #page-content-wrapper-reg {
@@ -119,16 +120,19 @@ html, body, #wrapper {
     overflow-y: scroll;
     height: 40vh;
     width: 30vw;
+    align-items: center;
+    margin-top: 12%;
     z-index: 1;
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left 40%,from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
 }
-#solution:after{
+/*#solution:after{
   content: "";
   background: linear-gradient(0deg, rgba(255,255,255,0.9) 25%, transparent 50%, rgba(255, 255, 255, 0.9) 75%);
   position: fixed;
   height: 45vh;
   width: 30vw;
   top: 28vh;
-}
+}*/
 
 .Aligner {
   display: flex;
@@ -294,7 +298,7 @@ html, body, #wrapper {
         display: none;
     }
     .message{
-        height: 50%;
+        height: 420px;
     }
     .contact{
         height: 60%;
@@ -306,7 +310,7 @@ html, body, #wrapper {
 
 @media(max-width:767px){
     .message{
-        height: 70%;
+        height: 420px;
     }
     .contact{
         height: auto;
@@ -320,7 +324,7 @@ html, body, #wrapper {
 }
 @media(max-width:600px){
     .message{
-        height: 100%;
+        height: 420px;
         position: relative;
     }
     .contact{
