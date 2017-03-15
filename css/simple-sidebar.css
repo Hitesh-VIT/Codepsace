@@ -119,11 +119,12 @@ html, body, #wrapper {
 #solution{
     overflow-y: scroll;
     height: 40vh;
-    width: 30vw;
+    width:50%;
     align-items: center;
-    margin-top: 12%;
+    margin-top: 11.5%;
     z-index: 1;
-    -webkit-mask-image: -webkit-gradient(linear, left bottom, left 40%,from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+    /* ONE SIDE GRADIENT*/
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left 40%,from(rgba(0,0,0,0)), to(rgba(0,0,0,1))); 
 }
 /*#solution:after{
   content: "";
@@ -335,6 +336,10 @@ html, body, #wrapper {
      .form{
         margin-top: 20%;
         height: auto;
+    }
+    #solution{
+        width: 100%;
+        font-size: 0.1px;
     }
 }
 @media(max-width:350px){
