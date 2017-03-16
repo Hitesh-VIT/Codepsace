@@ -77,7 +77,6 @@ html, body, #wrapper {
     width: 100%;
     position: relative;
     padding: 15px;
-    background-color: #ffffff;
     height:100%;
     border-radius: 25px;
     margin-bottom: 3vh;
@@ -86,7 +85,6 @@ html, body, #wrapper {
 #faq{
     width: 100%;
     position: relative;
-    background-color: #ffffff;
     border-radius: 25px;
     margin-bottom: 10%;
     margin-top: 10%;
@@ -220,6 +218,7 @@ html, body, #wrapper {
     position: absolute;
     bottom: 10vh;
     left: 5vw;
+    z-index: 500;
   }
   .con{
       position: relative;

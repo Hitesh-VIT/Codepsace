@@ -38,64 +38,62 @@
 
 <body>
 
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav" style="height: 85%;">
-                <li class="sidebar-brand">
-                    <a href="#firstPage">
-                        home
-                    </a>
-                </li>
-                <li class="sidebar-brand">
-                    <a href="#secondPage">
-                        past years
-                    </a>
-                </li>
-                <li class="sidebar-brand">
-                    <a href="#3rdPage">
-                        faq
-                    </a>
-                </li>
-                <li class="sidebar-brand">
-                    <a href="#4thPage">
-                        register
-                    </a>
-                </li>
-                <li>
-                <div class="row bottom-align-text-nav" style="width: 100%; margin-bottom: 40%">
-                        <div class="col-md-4 col-sm-4 icon">
-                            <a href="https://www.facebook.com/csivit/?fref=ts" target="_blank"><img class="social" src="social_icon/facebook.png"/></a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 icon" >
-                            <a href="https://twitter.com/csivitu" target="_blank"><img class="social" src="social_icon/twitter.png"/></a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 icon" > 
-                            <a href="https://github.com/csivit" target="_blank"><img class="social" src="social_icon/github.png"/></a>
-                        </div>
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav" style="height: 85%;">
+        <li class="sidebar-brand">
+            <a href="#firstPage">
+                home
+            </a>
+        </li>
+        <li class="sidebar-brand">
+            <a href="#secondPage">
+                past years
+            </a>
+        </li>
+        <li class="sidebar-brand">
+            <a href="#3rdPage">
+                faq
+            </a>
+        </li>
+        <li class="sidebar-brand">
+            <a href="#4thPage">
+                register
+            </a>
+        </li>
+        <li>
+            <div class="row bottom-align-text-nav" style="width: 100%; margin-bottom: 40%">
+                <div class="col-md-4 col-sm-4 icon">
+                    <a href="https://www.facebook.com/csivit/?fref=ts" target="_blank"><img class="social" src="social_icon/facebook.png"/></a>
                 </div>
-                </li>
-                <li class="sidebar-brand bottom-align-text-nav">
-                    <a href="#">
-                        contact us
-                    </a>
-                    
-                </li>
-                
-            </ul>
-            
-        </div>
-        <!-- /#sidebar-wrapper -->
+                <div class="col-md-4 col-sm-4 icon" >
+                    <a href="https://twitter.com/csivitu" target="_blank"><img class="social" src="social_icon/twitter.png"/></a>
+                </div>
+                <div class="col-md-4 col-sm-4 icon" >
+                    <a href="https://github.com/csivit" target="_blank"><img class="social" src="social_icon/github.png"/></a>
+                </div>
+            </div>
+        </li>
+        <li class="sidebar-brand bottom-align-text-nav">
+            <a href="#">
+                contact us
+            </a>
 
+        </li>
 
+    </ul>
+
+</div>
+
+    <div id="wrapper">
         <div id="fullpage">
         <!-- Home page -->
         <div class="section" id="page-content-wrapper">
-            <div class="container-fluid">
+            <video id="my-video" src="./media/cs0.mp4"></video>
+            <div class="container-fluid main-content">
                 <div class="row">
                     <div class="col-md-4 col-xs-12 col-sm-12">
-                        <img src="social_icon/logo.png"/>
+                        <img src="social_icon/logo.gif"/>
                     </div>
                 </div>
                 <div class="row">
@@ -361,6 +359,23 @@
 		css3:true
 	})
     };
+    </script>
+
+    <script>
+	    (function() {
+		    var video = document.getElementById("my-video");
+		    video.addEventListener( "canplay", function() {
+			    video.play();
+			    if(typeof video.loop == "boolean") {
+				    video.loop = true;
+			    } else {
+				    video.addEventListener('ended', function() {
+					    this.currentTime = 0;
+					    this.play();
+				    }, false);
+			    }
+		    });
+	    })();
     </script>
 
 </body>
