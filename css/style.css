@@ -149,6 +149,13 @@ span{
   color: #0093fc;
 }
 
+section#faq-section{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .social{
   color: #000000;
   height: 27px;
