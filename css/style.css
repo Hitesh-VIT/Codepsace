@@ -161,6 +161,13 @@ section#faq-section{
   align-items: center;
 }
 
+section#TieUp-section{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .social{
   color: #000000;
   height: 27px;
@@ -337,7 +344,11 @@ v:focus:-ms-input-placeholder {
     right: 10px;
     overflow: hidden;
 }
-
+@media (max-width: 1000px){
+    #wrapper{
+    width: 80vw;
+    }
+}
 @media (min-width: 768px)
 {
     #wrapper {
@@ -345,13 +356,15 @@ v:focus:-ms-input-placeholder {
     }
 }
 
-@media screen and (max-width: 600px) {
-    #my-video{
-        display: none;
-    }
-    #wrapper{
+@media (max-width: 767px){
+  #wrapper{
       overflow: scroll;
       width: 94%;
     }
+    #my-video{
+        display: none;
+    }
 }
+
+
 

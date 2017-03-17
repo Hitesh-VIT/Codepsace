@@ -71,7 +71,7 @@ html, body, #wrapper {
     border-radius: 0px; 
     padding: 0px; 
     background-color: #ffffff; 
-    margin-top: 20%
+    
 }
 #page-content-wrapper-past {
     width: 100%;
@@ -87,6 +87,13 @@ html, body, #wrapper {
     position: relative;
     border-radius: 25px;
     margin-bottom: 10%;
+    margin-top: 10%;
+}
+#page-content-wrapper-tieup{
+    width: 100%;
+    position: relative;
+    margin-bottom: 10%;
+    padding:0px;
     margin-top: 10%;
 }
 #page-content-wrapper-reg {
@@ -246,7 +253,23 @@ html, body, #wrapper {
         padding-left: 35px;
         color: #FFF;
     }
-
+@media (max-width: 991px){
+    #page-content-wrapper-tieup{
+        margin-top: 100%;
+    }
+  #faq{
+        margin-top: 150%;
+    }
+}
+@media (max-width: 894px){
+    
+  #page-content-wrapper-tieup{
+        margin-top: 120%;
+    }
+  #faq{
+        margin-top: 150%;
+    }
+}
 @media(min-width:768px) {
     
     #wrapper {
@@ -287,13 +310,10 @@ html, body, #wrapper {
         padding-bottom: 80px;
 
     }
+    
 }
 
-@media(max-width:1000px){
-    #faq{
-        margin-top: 0%;
-    }
-}
+
 @media(max-width:767px){
     
     .circle {
@@ -322,11 +342,17 @@ html, body, #wrapper {
     #payment{
         width: 100%;
     }
+    #page-content-wrapper-reg {
+        margin-top:45%;
+    }
+    #page-content-wrapper-contact{
+        margin-top:90%;
+    }
     
 }
 @media(max-width:600px){
     .message{
-        height: 420px;
+        height: 570px;
         position: relative;
     }
     .contact{
@@ -345,22 +371,44 @@ html, body, #wrapper {
     #page-content-wrapper-past{
         display: none;
     }
+    #page-content-wrapper-tieup{
+        margin-top: 80%;
+    }
     #faq{
         margin-top: 200%;
     }
     #page-content-wrapper-reg{
-        margin-top: 200%;
+        margin-top: 150%;
     }
+    
 }
-@media(max-width:350px){
+@media(max-width:400px){
      .form{
         margin-top: 15%;
         height: auto;
     }
+    #page-content-wrapper-tieup{
+        margin-top: 100%;
+    }
     #faq{
         margin-top: 250%;
     }
     #page-content-wrapper-reg{
         margin-top: 250%;
+    }
+}
+@media(max-width:300px){
+     .form{
+        margin-top: 15%;
+        height: auto;
+    }
+    #page-content-wrapper-tieup{
+        margin-top: 100%;
+    }
+    #faq{
+        margin-top: 400%;
+    }
+    #page-content-wrapper-reg{
+        margin-top: 400%;
     }
 }
