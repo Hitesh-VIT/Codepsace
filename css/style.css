@@ -349,4 +349,9 @@ v:focus:-ms-input-placeholder {
     #my-video{
         display: none;
     }
+    #wrapper{
+      overflow: scroll;
+      width: 94%;
+    }
 }
+

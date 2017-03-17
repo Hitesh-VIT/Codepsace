@@ -342,10 +342,25 @@ html, body, #wrapper {
         width: 100%;
         font-size: 0.1px;
     }
+    #page-content-wrapper-past{
+        display: none;
+    }
+    #faq{
+        margin-top: 200%;
+    }
+    #page-content-wrapper-reg{
+        margin-top: 200%;
+    }
 }
 @media(max-width:350px){
      .form{
         margin-top: 15%;
         height: auto;
+    }
+    #faq{
+        margin-top: 250%;
+    }
+    #page-content-wrapper-reg{
+        margin-top: 250%;
     }
 }
