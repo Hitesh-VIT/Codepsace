@@ -97,7 +97,7 @@ html, body, #wrapper {
 #page-content-wrapper-reg {
     width: 100%;
     position: relative;
-    padding: 12%;
+    padding: 8%;
     background-color: #0093fc;
     color: #ffffff;
     height:100%;
@@ -243,6 +243,7 @@ html, body, #wrapper {
     padding: 30px 50px 30px 30px;
     bottom: 5%;
     }
+
 @media (max-width: 991px){
     #page-content-wrapper-tieup{
         margin-top: 100%;
@@ -537,7 +538,7 @@ section#faq-section{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12% 0 0 0;
+    padding: 10% 0 0 0;
 }
 
 section#TieUp-section{
