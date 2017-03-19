@@ -19,6 +19,34 @@ html, body, #wrapper {
 
 /* Toggle Styles */
 
+#overlay{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    transition: transform 1s cubic-bezier(1, -0.05, 0.26, 0.95);
+}
+
+#progress{
+    height: 4px;
+    background: #0093fc;
+    position: absolute;
+    width: 0;
+    top:0;
+    transition: all 3s ease;
+}
+
+#progstat{
+    position: absolute;
+    top: calc( 50vh - 60px );
+    text-align: center;
+    transition: all 1s ease;
+    left: calc( 50vw - 60px);
+}
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
