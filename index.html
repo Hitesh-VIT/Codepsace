@@ -225,20 +225,20 @@
                         <form id="form_pay" class="form-horizontal">
                             <div class="form-group" style="margin-bottom: 2.5%">
                                 <div id="name_div" class="col-md-12 col-xs-12 col-sm-12">
-                                    <input type="text" id="name_pay" class="form-control" placeholder="NAME">
+                                    <input type="text" id="name_pay" class="form-control" placeholder="NAME" required="true">
                                     <span id="error_name_pay" class="error" style="color: #ffffff; margin-top: 2px">* This field is required</span>
                                 </div>
                             </div>
                             <div class="form-group" style="margin-bottom: 2.5%">
                                 <div id="email_div" class="col-md-12 col-xs-12 col-sm-12">
-                                    <input type="email" id="email_pay" class="form-control" placeholder="E-MAIL">
+                                    <input type="email" id="email_pay" class="form-control" placeholder="E-MAIL" required="true">
                                 </div>
                                 <span id="error_email_pay" class="error" style="color: #ffffff; margin-top: 2px">* This field is required with vail email</span>
                             </div>
                             <div class="row" style="margin-bottom: 2%">
                                 <center>
                                     <div class="col-lg-6 col-xs-12 col-md-6" style="color: #ffffff; text-align: left">
-                                        <h4>If you are a VIT student, please provide your registration number: </h4>
+                                        <h4>Are you a VIT student ? </h4>
                                     </div>
                                     <div class="col-lg-6 col-xs-12 col-md-6">
                                         <div class="input-group" style="width: 30px;">
@@ -254,7 +254,8 @@
                                 <div id="reg_no_div" class="col-md-12 col-xs-12 col-sm-12">
                                     <input type="text" id="reg_no_pay" pattern="^[1-9]{1}[0-9]{1}[A-Za-z]{3}[0-9]{4}$"
                                            class="form-control" style="background-color: #0093fc"
-                                           placeholder="REGISTRATION No." disabled>
+                                           placeholder="REGISTRATION No." 
+                                           required="true" disabled>
                                 </div>
                                 <span id="error_reg_pay" class="error" style="color: #ffffff; margin-top: 2px">* This field is required with valid No.</span>
                             </div>
@@ -262,14 +263,15 @@
                                 <div id="uni_name_div" class="col-md-12 col-xs-12 col-sm-12">
                                     <input type="text" id="uni_name_pay" class="form-control"
                                            style="background-color: #0093fc"
-                                           placeholder="UNIVERSITY / INSTITUTION NAME">
+                                           placeholder="UNIVERSITY / INSTITUTION NAME"
+                                           required="true">
                                 </div>
                                 <span id="error_uni_pay" class="error" style="color: #ffffff; margin-top: 2px">* This field is required</span>
                             </div>
+                            <p style="text-align: center">* Please fill all the details on the following pages *</p>
                             <div class="form-group" style="margin-top: 2vh;">
                                 <div class="col-md-4 col-xs-12 col-sm-12"
                                      onclick="pay('name_pay', 'email_pay', 'Checkbox_pay', 'reg_no_pay', 'uni_name_pay');">
-                                    <center>
                                         <button id="pay" type="submit" class="btn btn-send">
                                             <center>Register Now!</center>
                                         </button>
