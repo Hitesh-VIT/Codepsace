@@ -276,12 +276,16 @@ html, body, #wrapper {
     #page-content-wrapper-tieup{
         margin-top: 100%;
     }
+    #not{
+        display: none;
+    }
 }
 @media (max-width: 894px){
     
-  #page-content-wrapper-tieup{
+    #page-content-wrapper-tieup{
         margin-top: 120%;
     }
+    
 }
 @media(min-width:768px) {
     
@@ -382,6 +386,9 @@ html, body, #wrapper {
     }
     #page-content-wrapper-tieup{
         margin-top: 80%;
+    }
+    #not{
+        display: initial;
     }
 
     #description{
