@@ -442,8 +442,9 @@ html, body, #wrapper {
 }
 .text {
     position: relative;
-    left: 30vw;
-    top: -10vh;
+    left: 28vw;
+    top: -15vh;
+    font-size: 1.4em;
 }
 @media(min-width: 1500px){
     .slide1 div.page_no {
