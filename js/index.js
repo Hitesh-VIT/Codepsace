@@ -2,10 +2,11 @@
  $(document).ready(function(){
  $(".owl-carousel").owlCarousel({
  loop:true,
- autoplay:false,
+ autoplay:true,
  autoplayTimeout:3000,
  autoplayHoverPause:false,
  items: 1,
+ touchDrag: true,
  dots: true,
  nav: false
  });
